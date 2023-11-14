@@ -35,10 +35,7 @@ public class UserController {
     }
 
     @PutMapping(path = "/{id}")
-    String updateUser(@RequestBody User user, @PathVariable long id) {
-        return userService.updateUser(user, id);
-
-    }
+    String updateUser(@RequestBody User user, @PathVariable long id) { return userService.updateUser(user, id); }
 
     @DeleteMapping(path = "/{id}")
     String deleteUser(@PathVariable long id) {
@@ -46,8 +43,6 @@ public class UserController {
     }
 
     @GetMapping
-    List<User> getUsers() {
-        return userService.getUsers();
-    }
+    List<User> getUsers() { return userService.getUsers(); }
 
 }
